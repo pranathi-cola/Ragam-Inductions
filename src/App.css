@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+*
+{
+  font-family: 'Rubik';
+  color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.template-info
+{
+  border-radius: 1vh;
+  padding-top: 1vh;
+  margin: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 25%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mysvg
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.info-in-template
+{
+  border-radius: 1vh;
+  padding: 1vh;
+}
+
+.bro-template
+{
+  border-radius: 1vh;
+  margin: 2vh;
+  padding-bottom: 1vh;
+  width: 25%;
+}
+
+.bro-info
+{
+  border-radius: 1vh;
+  display: flex;
+  padding: 3vh;
+  flex-direction: column;
+}
+
+.main-window
+{
+  background-color: hsl(226, 43%, 10%);
+  padding: 150px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.templates-collection
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.jerry-img
+{
+  width: 40%;
+  height: auto;
+  background-color: white;
+  padding: 0.5vh;
+  border-radius: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.jerry-img img
+{
+  width: 100%;
+  height: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.jerry-info
+{
+  flex: 0 0 0;
 }
