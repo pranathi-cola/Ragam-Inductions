@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/github.io/Ragam-Inductions/static/css/main.f36adfc7.css",
+    "main.js": "/github.io/Ragam-Inductions/static/js/main.fc61a421.js",
+    "static/js/453.7b4b100f.chunk.js": "/github.io/Ragam-Inductions/static/js/453.7b4b100f.chunk.js",
+    "static/media/image-jeremy.png": "/github.io/Ragam-Inductions/static/media/image-jeremy.71cd41f11bee24c1ded3.png",
+    "index.html": "/github.io/Ragam-Inductions/index.html",
+    "main.f36adfc7.css.map": "/github.io/Ragam-Inductions/static/css/main.f36adfc7.css.map",
+    "main.fc61a421.js.map": "/github.io/Ragam-Inductions/static/js/main.fc61a421.js.map",
+    "453.7b4b100f.chunk.js.map": "/github.io/Ragam-Inductions/static/js/453.7b4b100f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f36adfc7.css",
+    "static/js/main.fc61a421.js"
+  ]
+}
