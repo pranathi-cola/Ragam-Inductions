@@ -200,3 +200,14 @@ p
     font-size: 18px;
   }
 }
+
+.data
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (width<=40em) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
