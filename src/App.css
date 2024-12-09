@@ -19,7 +19,6 @@
   display: flex;
   gap: 14px;
   max-width: 100%;
-  align-items: center;
   justify-content: center;
   @media (width <= 40em) {
     flex-direction: column;
@@ -49,18 +48,19 @@
 {
   display: grid;
   height: fit-content;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 14px;
   grid-auto-rows: 1fr;
   max-width: fit-content;
   margin: 2vh;
-  @media (width >= 40em) {
+  max-width: 80%;
+  @media (width <=60em) {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 66%;
+    max-width: 70%;
   }
-  @media (width >= 60em) {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 75%;
+  @media (width <= 40em) {
+    grid-template-columns: 1fr;
+    max-width: 100%;
   }
 }
 
