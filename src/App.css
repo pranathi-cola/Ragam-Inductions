@@ -15,11 +15,11 @@
 .main-window
 {
   background-color: hsl(226, 43%, 10%);
-  padding: 18%;
+  padding: 10%;
   display: flex;
   gap: 14px;
-  max-width: 100%;
   justify-content: center;
+  align-items: stretch;
   @media (width <= 40em) {
     flex-direction: column;
     padding: 5%;
@@ -44,23 +44,29 @@
   }
 }
 
+.bro-template:hover,
+.template-info:hover
+{
+  transform: scale(1.2);
+}
+
 .templates-collection
 {
   display: grid;
-  height: fit-content;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
   grid-auto-rows: 1fr;
   max-width: fit-content;
   margin: 2vh;
-  max-width: 80%;
+  max-width: 750px;
   @media (width <=60em) {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 70%;
+    max-width: 66%;
   }
   @media (width <= 40em) {
     grid-template-columns: 1fr;
     max-width: 100%;
+    gap: 14px;
   }
 }
 
@@ -72,6 +78,7 @@
   flex-direction: column;
   gap: none;
   max-width: 100%;
+  justify-content: space-between;
 }
 
 .bro-info
@@ -129,7 +136,7 @@
 {
   list-style-type: none;
   display: flex;
-
+  justify-content: center;
   @media (width<40rem)
   {
     flex-direction: row;
