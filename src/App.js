@@ -24,7 +24,7 @@ function Bro({updateTemplate, screenon})
   return (
     <div style={{backgroundColor: "hsl(235, 46%, 20%)"}} className='bro-template'>
       <div style={{backgroundColor: "hsl(246, 80%, 60%)"}} className='bro-info'>
-        <div className='jerry-img'><img src={jeremy}></img></div>
+        <div className='jerry-img'><img alt="user" src={jeremy}></img></div>
         <div className='jerry-info'>
           <p className='report-for'>Report for</p>
           <p className='name'>Jeremy Robson</p>
@@ -41,8 +41,17 @@ function Bro({updateTemplate, screenon})
   )
 }
 
-function Template_Info({todo, current, previous, color, svgData})
+function TemplateInfo({todo, current, previous, color, svgData, screenon})
 {
+  let previous_sent = "Last Week - " + previous + "hrs";
+  if(screenon==='daily')
+  {
+    previous_sent = "Yesterday - " + previous + "hrs";
+  }
+  else if(screenon==='monthly')
+  {
+    previous_sent = "Last Month - " + previous + "hrs";
+  }
   return (
   <div style={{backgroundColor: color}} className='template-info'>
       <div className='mysvg'>
@@ -57,7 +66,7 @@ function Template_Info({todo, current, previous, color, svgData})
         </div>
         <div className='data'>
           <div className='current'>{current}hrs</div>
-          <div className='previous'>Last Week - {previous}hrs</div>
+          <div className='previous'>{previous_sent}</div>
         </div>
       </div>
     </div>
@@ -74,7 +83,7 @@ function App() {
       <Bro updateTemplate={updateTemplate} screenon={screenon}/>
       <div className='templates-collection'>
       {data.map((item) => (
-          <Template_Info
+          <TemplateInfo
             todo = {item.title}
             current = {item.timeframes[screenon].current}
             previous = {item.timeframes[screenon].previous}
@@ -89,6 +98,7 @@ function App() {
                 fillrule: item.fillrule
               }
             }
+            screenon={screenon}
           />
         ))}
       </div>
