@@ -6,28 +6,29 @@
   color: white;
 }
 
-.template-info
+.previous,
+.report-for
 {
-  border-radius: 1vh;
-  padding-top: 1vh;
-  margin: 2vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  width: 25%;
+  color: hsl(236, 100%, 87%);
 }
 
-.mysvg
+.main-window
 {
+  background-color: hsl(226, 43%, 10%);
+  padding: 18%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.info-in-template
-{
-  border-radius: 1vh;
-  padding: 1vh;
+  gap: 14px;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  @media (width <= 40em) {
+    flex-direction: column;
+    padding: 5%;
+  }
+  @media (width >= 60em) {
+    flex-direction: row;
+    padding: 10%;
+  }
 }
 
 .bro-template
@@ -35,7 +36,42 @@
   border-radius: 1vh;
   margin: 2vh;
   padding-bottom: 1vh;
-  width: 25%;
+  max-width: fit-content;
+  @media (width >= 40em) {
+    width: 33%;
+  }
+  @media (width >= 60em) {
+    width: 25%;
+  }
+}
+
+.templates-collection
+{
+  display: grid;
+  height: fit-content;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  grid-auto-rows: 1fr;
+  max-width: fit-content;
+  margin: 2vh;
+  @media (width >= 40em) {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 66%;
+  }
+  @media (width >= 60em) {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 75%;
+  }
+}
+
+.template-info
+{
+  border-radius: 1vh;
+  padding-top: 1vh;
+  display: flex;
+  flex-direction: column;
+  gap: none;
+  max-width: 100%;
 }
 
 .bro-info
@@ -44,29 +80,18 @@
   display: flex;
   padding: 3vh;
   flex-direction: column;
-}
-
-.main-window
-{
-  background-color: hsl(226, 43%, 10%);
-  padding: 150px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.templates-collection
-{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: space-around;
+  @media (width <= 40em) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 
 .jerry-img
 {
   width: 40%;
-  height: auto;
+  height: 40%;
   background-color: white;
   padding: 0.5vh;
   border-radius: 100%;
@@ -74,6 +99,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media (width <= 40em) {
+    width: 25%;
+    height: 25%;
+    border-radius: 100%;
+  }
 }
 
 .jerry-img img
@@ -84,5 +114,63 @@
 
 .jerry-info
 {
-  flex: 0 0 0;
+  padding: 0.5vh;
+}
+
+.jerry-info name
+{
+  font-size: 27px;
+  @media (width >= 60em) {
+    font-size: 40px;
+  }
+}
+
+.calender-info
+{
+  list-style-type: none;
+  display: flex;
+
+  @media (width<40rem)
+  {
+    flex-direction: row;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 40px;
+    justify-content: space-around;
+  }
+  @media (width>40rem) 
+  {
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 3vh;
+    justify-content: space-between;
+  }
+}
+
+.calender-info li
+{
+  padding: 5px;
+}
+
+.mysvg
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  height: 55px;
+}
+
+.info-in-template
+{
+  border-radius: 1vh;
+  padding: 1vh;
+}
+
+.header
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
