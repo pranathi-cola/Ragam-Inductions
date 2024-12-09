@@ -137,6 +137,7 @@
   list-style-type: none;
   display: flex;
   justify-content: center;
+  
   @media (width<40rem)
   {
     flex-direction: row;
