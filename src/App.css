@@ -78,7 +78,7 @@
   flex-direction: column;
   gap: none;
   max-width: 100%;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .bro-info
@@ -137,7 +137,7 @@
   list-style-type: none;
   display: flex;
   justify-content: center;
-  
+
   @media (width<40rem)
   {
     flex-direction: row;
