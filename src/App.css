@@ -6,6 +6,14 @@
   color: white;
 }
 
+p
+{
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5vh;
+}
+
 .previous,
 .report-for
 {
@@ -172,13 +180,23 @@
 .info-in-template
 {
   border-radius: 1vh;
-  padding: 1vh;
+  padding: 2.5vh;
 }
 
 .header
 {
   display: flex;
   flex-direction: row;
+  padding-bottom: 2vh;
   justify-content: space-between;
   align-items: center;
+}
+
+.name,
+.current
+{
+  font-size: 27px;
+  @media (width <=40em) {
+    font-size: 18px;
+  }
 }
